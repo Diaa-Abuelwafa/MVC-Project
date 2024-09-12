@@ -1,0 +1,34 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "Department";
+}
+
+<h1>Department Details Page</h1>
+
+<br />
+<br />
+
+<div class="form-group">
+    <label asp-for="Code"></label>
+    <input asp-for="Code" readonly class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" readonly class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="DateOfCreation"></label>
+    <input asp-for="DateOfCreation" readonly class="form-control">
+</div>
+
+<br />
+
+<a asp-controller="Department" asp-action="Update" asp-route-id="@Model.DepartmentId" class="btn btn-warning">Edit</a>
+<a asp-controller="Department" asp-action="Index" class="btn btn-light">Back To List</a>

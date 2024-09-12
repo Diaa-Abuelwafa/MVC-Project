@@ -1,0 +1,12 @@
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
