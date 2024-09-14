@@ -17,59 +17,59 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PresentationLayer
 build_property.RootNamespace = PresentationLayer
-build_property.ProjectDir = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\PresentationLayer\
+build_property.ProjectDir = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\PresentationLayer
+build_property.MSBuildProjectDirectory = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Department/AddDepartment.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/AddDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBZGREZXBhcnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Department/AllDepartments.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/AllDepartments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBbGxEZXBhcnRtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Department/DeleteDepartment.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/DeleteDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGVEZXBhcnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Department/DepartmentDetails.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/DepartmentDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXBhcnRtZW50RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Department/UpdateDepartment.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/UpdateDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxVcGRhdGVEZXBhcnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Home/Index.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Home/Privacy.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Shared/Error.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/_ViewImports.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/_ViewStart.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Route/MVCProject01/PresentationLayer/Views/Shared/_Layout.cshtml]
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xphr5dixgj

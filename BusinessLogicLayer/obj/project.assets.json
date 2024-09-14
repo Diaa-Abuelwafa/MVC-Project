@@ -2771,11 +2771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Route\\MVCProject01\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectUniqueName": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "projectName": "BusinessLogicLayer",
-      "projectPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Route\\MVCProject01\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "packagesPath": "C:\\Users\\metro\\.nuget\\packages\\",
-      "outputPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Route\\MVCProject01\\BusinessLogicLayer\\obj\\",
+      "outputPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\BusinessLogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\metro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2793,8 +2793,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Route\\MVCProject01\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Route\\MVCProject01\\DataAccessLayer\\DataAccessLayer.csproj"
+            "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

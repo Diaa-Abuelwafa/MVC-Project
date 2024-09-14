@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccessLayer
-build_property.ProjectDir = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Route\MVCProject01\DataAccessLayer\
+build_property.ProjectDir = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\DataAccessLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

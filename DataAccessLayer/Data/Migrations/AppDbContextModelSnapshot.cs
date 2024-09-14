@@ -43,7 +43,7 @@ namespace DataAccessLayer.Data.Migrations
 
                     b.HasKey("DepartmentId");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -23,7 +23,7 @@ namespace PresentationLayer.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Department D)
         {
-            if(D.Name != null && D.Code != null)
+            if(ModelState.IsValid == true)
             {
                 DepartmentRepository DepartmentClass = new DepartmentRepository();
                 int Result = DepartmentClass.Save(D);
@@ -78,6 +78,19 @@ namespace PresentationLayer.Controllers
             int Result = DepartmentClass.Delete(id);
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult CheckName(string Name)
+        {
+            DepartmentRepository DepartmentClass = new DepartmentRepository();
+            bool Flag = DepartmentClass.CheckUnique(Name);
+
+            if(Flag)
+            {
+                return Json(true);
+            }
+
+            return Json(false);
         }
     }
 }

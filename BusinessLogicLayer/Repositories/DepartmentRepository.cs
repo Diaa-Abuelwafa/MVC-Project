@@ -60,5 +60,22 @@ namespace BusinessLogicLayer.Repositories
                 return Context.SaveChanges();
             }
         }
+
+        public bool CheckUnique(string Name)
+        {
+            Department D;
+
+            using(AppDbContext Context = new AppDbContext())
+            {
+                D = Context.Departments.FirstOrDefault(x => x.Name == Name);
+            }
+
+            if(D == null)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
