@@ -514,10 +514,3 @@ D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\Present
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\obj\Debug\net8.0\PresentationLayer.pdb
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\obj\Debug\net8.0\PresentationLayer.genruntimeconfig.cache
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\obj\Debug\net8.0\ref\PresentationLayer.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.Mvc.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.Razor.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.Helpers.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\System.Web.WebPages.dll
-D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll

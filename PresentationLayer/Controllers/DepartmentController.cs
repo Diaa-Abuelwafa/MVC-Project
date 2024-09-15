@@ -92,5 +92,12 @@ namespace PresentationLayer.Controllers
 
             return Json(false);
         }
+
+        [Route("emp/{Name:alpha}")]
+        // OR : [HttpGet("emp/{Name:alpha}")]
+        public IActionResult ActionRoute(string Name)
+        {
+            return Content($"This Name : {Name}");
+        }
     }
 }
