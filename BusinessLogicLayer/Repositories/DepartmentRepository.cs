@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Data.Contexts;
+﻿using BusinessLogicLayer.Interfaces;
+using DataAccessLayer.Data.Contexts;
 using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -8,67 +9,19 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Repositories
 {
-    public class DepartmentRepository
+    public class DepartmentRepository : IDepartmentRepository
     {
-        public IEnumerable<Department> GetAll()
+        private AppDbContext Context;
+
+        public DepartmentRepository(AppDbContext Context)
         {
-            using(AppDbContext Context = new AppDbContext())
-            {
-                return Context.Departments.ToList();
-            }
-        }
-
-        public Department GetDept(int id)
-        {
-            using(AppDbContext Context = new AppDbContext())
-            {
-                return Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
-            }
-        }
-
-        public int Save(Department D)
-        {
-            using(AppDbContext Context = new AppDbContext())
-            {
-                Context.Departments.Add(D);
-
-                return Context.SaveChanges();
-            }
-        }
-
-        public int SaveUpdated(Department D, int id)
-        {
-            using (AppDbContext Context = new AppDbContext())
-            {
-                Department Dept = Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
-
-                Dept.Code = D.Code;
-                Dept.Name = D.Name;
-                Dept.DateOfCreation = D.DateOfCreation;
-
-                return Context.SaveChanges();
-            }
-        }
-
-        public int Delete(int id)
-        {
-            using(AppDbContext Context = new AppDbContext())
-            {
-                Department Dept = Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
-                Context.Departments.Remove(Dept);
-
-                return Context.SaveChanges();
-            }
+            // Inject
+            this.Context = Context;
         }
 
         public bool CheckUnique(string Name)
         {
-            Department D;
-
-            using(AppDbContext Context = new AppDbContext())
-            {
-                D = Context.Departments.FirstOrDefault(x => x.Name == Name);
-            }
+            Department D = Context.Departments.FirstOrDefault(x => x.Name == Name);
 
             if(D == null)
             {
@@ -76,6 +29,40 @@ namespace BusinessLogicLayer.Repositories
             }
 
             return false;
+        }
+
+        public void Delete(int id)
+        {
+            Department D = Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
+            Context.Departments.Remove(D);
+
+            Context.SaveChanges();
+        }
+
+        public void Edit(int id, Department Item)
+        {
+            Department D = Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
+
+            D.Code = Item.Code;
+            D.Name = Item.Name;
+            D.DateOfCreation = Item.DateOfCreation;
+
+            Context.SaveChanges();
+        }
+
+        public List<Department> GetAll()
+        {
+            return Context.Departments.ToList();
+        }
+
+        public Department GetById(int id)
+        {
+            return Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
+        }
+
+        public void Insert(Department Item)
+        {
+            Context.Departments.Add(Item);
         }
     }
 }

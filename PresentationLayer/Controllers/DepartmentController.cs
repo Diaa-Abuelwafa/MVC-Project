@@ -1,4 +1,5 @@
-﻿using BusinessLogicLayer.Repositories;
+﻿using BusinessLogicLayer.Interfaces;
+using BusinessLogicLayer.Repositories;
 using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +7,15 @@ namespace PresentationLayer.Controllers
 {
     public class DepartmentController : Controller
     {
+        IDepartmentRepository DepartmentRepository;
+
+        public DepartmentController(IDepartmentRepository DepartmentRepository)
+        {
+            this.DepartmentRepository = DepartmentRepository;
+        }
         public IActionResult Index()
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            var Departments = DepartmentClass.GetAll();
+            List<Department> Departments = DepartmentRepository.GetAll();
 
             return View("AllDepartments", Departments);
         }
@@ -25,8 +31,7 @@ namespace PresentationLayer.Controllers
         {
             if(ModelState.IsValid == true)
             {
-                DepartmentRepository DepartmentClass = new DepartmentRepository();
-                int Result = DepartmentClass.Save(D);
+                DepartmentRepository.Insert(D);
                 return RedirectToAction("Index");
             }
 
@@ -35,18 +40,16 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Details(int id)
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            Department Dept = DepartmentClass.GetDept(id);
+            Department Department = DepartmentRepository.GetById(id);
 
-            return View("DepartmentDetails", Dept);
+            return View("DepartmentDetails", Department);
         }
 
         public IActionResult Update(int id)
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            Department Dept = DepartmentClass.GetDept(id);
+            Department Department = DepartmentRepository.GetById(id);
 
-            return View("UpdateDepartment", Dept);
+            return View("UpdateDepartment", Department);
         }
 
         [HttpPost]
@@ -55,8 +58,7 @@ namespace PresentationLayer.Controllers
         {
             if(D.Name != null && D.Code != null)
             {
-                DepartmentRepository DepartmentClass = new DepartmentRepository();
-                int Result = DepartmentClass.SaveUpdated(D, id);
+                DepartmentRepository.Edit(id, D);
 
                 return RedirectToAction("Index");
             }
@@ -66,24 +68,21 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Delete(int id)
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            Department Dept = DepartmentClass.GetDept(id);
+            Department Department = DepartmentRepository.GetById(id);
 
-            return View("DeleteDepartment", Dept);
+            return View("DeleteDepartment", Department);
         }
 
         public IActionResult SaveDelete (int id)
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            int Result = DepartmentClass.Delete(id);
+            DepartmentRepository.Delete(id);
 
             return RedirectToAction("Index");
         }
 
         public IActionResult CheckName(string Name)
         {
-            DepartmentRepository DepartmentClass = new DepartmentRepository();
-            bool Flag = DepartmentClass.CheckUnique(Name);
+            bool Flag = DepartmentRepository.CheckUnique(Name);
 
             if(Flag)
             {
