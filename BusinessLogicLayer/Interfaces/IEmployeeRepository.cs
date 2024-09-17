@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeRepository : IGenericRepository<Employee>
     {
-        public List<Employee> GetAll();
-        public Employee GetById(int id);
-        public void Insert(Employee Item);
-        public void Edit(int id, Employee Item);
-        public void Delete(int id);
+        
     }
 }
