@@ -12,6 +12,7 @@ namespace DataAccessLayer.Data.Contexts
     public class AppDbContext : DbContext
     {
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         public AppDbContext() : base()
         {
@@ -21,6 +22,11 @@ namespace DataAccessLayer.Data.Contexts
         public AppDbContext(DbContextOptions options) : base(options)
         {
             
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

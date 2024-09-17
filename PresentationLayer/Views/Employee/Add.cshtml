@@ -1,0 +1,94 @@
+﻿@model Employee
+
+@inject IDepartmentRepository DepartmentRepository
+
+@{
+    ViewData["Title"] = "Employee";
+
+    List<Department> Depts = DepartmentRepository.GetAll();
+
+    SelectList Departments = new SelectList(Depts, "DepartmentId", "Name");
+}
+
+<h1>Add Employee Page</h1>
+
+<br />
+<br />
+
+<form asp-controller="Employee" asp-action="Add">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control">
+        <span class="text-danger" asp-validation-for="Age"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control">
+        <span class="text-danger" asp-validation-for="Address"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" class="form-control">
+        <span class="text-danger" asp-validation-for="Salary"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" class="form-control">
+        <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+    </div>
+
+    <br />
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" asp-for="IsActive">
+        <label class="form-check-label" asp-for="IsActive"></label>
+        <span class="text-danger" asp-validation-for="IsActive"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label asp-for="HireDate"></label>
+        <input asp-for="HireDate" class="form-control">
+        <span class="text-danger" asp-validation-for="HireDate"></span>
+    </div>
+
+    <br />
+
+   <div class="form-group">
+        <select class="form-select" asp-items="Departments" asp-for="DeptId">
+            <option value="-1">-- Select Department --</option>
+        </select>
+        <span class="text-danger" asp-validation-for="DeptId"></span>
+   </div>
+
+    <br />
+
+    <input class="btn btn-primary" type="submit" value="Create" />
+    <a class="btn btn-light" asp-controller="Employee" asp-action="Index">Back To List</a>
+</form>

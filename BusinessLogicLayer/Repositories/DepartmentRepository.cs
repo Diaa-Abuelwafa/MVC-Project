@@ -1,6 +1,7 @@
 ﻿using BusinessLogicLayer.Interfaces;
 using DataAccessLayer.Data.Contexts;
 using DataAccessLayer.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace BusinessLogicLayer.Repositories
 {
     public class DepartmentRepository : IDepartmentRepository
     {
-        private AppDbContext Context;
+        private readonly AppDbContext Context;
 
         public DepartmentRepository(AppDbContext Context)
         {
@@ -52,17 +53,19 @@ namespace BusinessLogicLayer.Repositories
 
         public List<Department> GetAll()
         {
-            return Context.Departments.ToList();
+            return Context.Departments.Include(x => x.Employees).ToList();
         }
 
         public Department GetById(int id)
         {
-            return Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
+            return Context.Departments.Include(x => x.Employees).FirstOrDefault(x => x.DepartmentId == id);
         }
 
         public void Insert(Department Item)
         {
             Context.Departments.Add(Item);
+
+            Context.SaveChanges();
         }
     }
 }

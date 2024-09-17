@@ -1,0 +1,75 @@
+﻿@model Employee
+
+
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input readonly asp-for="Name" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Age"></label>
+    <input readonly asp-for="Age" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Address"></label>
+    <input readonly asp-for="Address" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input readonly asp-for="Email" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Salary"></label>
+    <input readonly asp-for="Salary" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="PhoneNumber"></label>
+    <input readonly asp-for="PhoneNumber" class="form-control">
+</div>
+
+<br />
+
+@{
+    string IsActiveValue = "Yes";
+
+    if (Model.IsActive == false)
+    {
+        IsActiveValue = "No";
+    }
+}
+
+<div class="form-group">
+    <label for="IsActive">Is Active ?</label>
+    <input readonly value="@IsActiveValue" id="IsActive" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="HireDate"></label>
+    <input readonly asp-for="HireDate" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label for="DeptName">Department Name</label>
+    <input readonly value="@Model.Department.Name" id="DeptName" class="form-control">
+</div>
+
+<br />

@@ -22,5 +22,6 @@ namespace DataAccessLayer.Models
 
         [Required]
         public DateTime DateOfCreation { get; set; }
+        public List<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

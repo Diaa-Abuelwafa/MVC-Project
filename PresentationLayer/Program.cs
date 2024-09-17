@@ -17,6 +17,9 @@ namespace PresentationLayer
             // Add Custom Services To The Container
             builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
 
+            // Add Custom Service To The Container
+            builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
+
             // Add DbContext Service To The Container
             builder.Services.AddDbContext<AppDbContext>(optionBuilder =>
             {
@@ -36,22 +39,6 @@ namespace PresentationLayer
             app.UseRouting();
 
             app.UseAuthorization();
-
-            // Specific Map Route
-            app.MapControllerRoute(
-                name: "MyRoute02",
-                pattern: "emp/{id:int?}",
-                new
-                {
-                    controller = "Department",
-                    action = "Index"
-                });
-
-            // General Map Route
-            app.MapControllerRoute(
-                name: "MyRoute01",
-                pattern: "{controller=Department}/{action=Index}/{id?}/{name:alpha?}"
-                );
 
             // General Map Route
             app.MapControllerRoute(
