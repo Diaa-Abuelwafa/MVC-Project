@@ -14,5 +14,6 @@ namespace BusinessLogicLayer.Interfaces
         public void Insert(T Item);
         public void Edit(int id, T Item);
         public void Delete(int id);
+        public int SaveChanges();
     }
 }

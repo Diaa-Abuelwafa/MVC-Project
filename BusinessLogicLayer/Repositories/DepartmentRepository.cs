@@ -37,7 +37,7 @@ namespace BusinessLogicLayer.Repositories
             Department D = Context.Departments.FirstOrDefault(x => x.DepartmentId == id);
             Context.Departments.Remove(D);
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
         }
 
         public void Edit(int id, Department Item)
@@ -48,7 +48,7 @@ namespace BusinessLogicLayer.Repositories
             D.Name = Item.Name;
             D.DateOfCreation = Item.DateOfCreation;
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
         }
 
         public List<Department> GetAll()
@@ -65,7 +65,11 @@ namespace BusinessLogicLayer.Repositories
         {
             Context.Departments.Add(Item);
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
+        }
+        public int SaveChanges()
+        {
+            return Context.SaveChanges();
         }
     }
 }

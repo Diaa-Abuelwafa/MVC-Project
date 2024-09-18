@@ -7,15 +7,16 @@ namespace PresentationLayer.Controllers
 {
     public class DepartmentController : Controller
     {
-        IDepartmentRepository DepartmentRepository;
-
-        public DepartmentController(IDepartmentRepository DepartmentRepository)
+        //IDepartmentRepository DepartmentRepository;
+        private readonly IUnitOfWorkRepository UnitOfWorkRepository;
+        public DepartmentController(IUnitOfWorkRepository UnitOfWorkRepository)
         {
-            this.DepartmentRepository = DepartmentRepository;
+            //this.DepartmentRepository = DepartmentRepository;
+            this.UnitOfWorkRepository = UnitOfWorkRepository;
         }
         public IActionResult Index()
         {
-            List<Department> Departments = DepartmentRepository.GetAll();
+            List<Department> Departments = UnitOfWorkRepository.DepartmentRepository.GetAll();
 
             return View("AllDepartments", Departments);
         }
@@ -31,7 +32,7 @@ namespace PresentationLayer.Controllers
         {
             if(ModelState.IsValid == true)
             {
-                DepartmentRepository.Insert(D);
+                UnitOfWorkRepository.DepartmentRepository.Insert(D);
                 return RedirectToAction("Index");
             }
 
@@ -40,14 +41,14 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Details(int id)
         {
-            Department Department = DepartmentRepository.GetById(id);
+            Department Department = UnitOfWorkRepository.DepartmentRepository.GetById(id);
 
             return View("DepartmentDetails", Department);
         }
 
         public IActionResult Update(int id)
         {
-            Department Department = DepartmentRepository.GetById(id);
+            Department Department = UnitOfWorkRepository.DepartmentRepository.GetById(id);
 
             return View("UpdateDepartment", Department);
         }
@@ -58,7 +59,8 @@ namespace PresentationLayer.Controllers
         {
             if(D.Name != null && D.Code != null)
             {
-                DepartmentRepository.Edit(id, D);
+                UnitOfWorkRepository.DepartmentRepository.Edit(id, D);
+                UnitOfWorkRepository.DepartmentRepository.SaveChanges();
 
                 return RedirectToAction("Index");
             }
@@ -68,21 +70,22 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Delete(int id)
         {
-            Department Department = DepartmentRepository.GetById(id);
+            Department Department = UnitOfWorkRepository.DepartmentRepository.GetById(id);
 
             return View("DeleteDepartment", Department);
         }
 
         public IActionResult SaveDelete (int id)
         {
-            DepartmentRepository.Delete(id);
+            UnitOfWorkRepository.DepartmentRepository.Delete(id);
+            UnitOfWorkRepository.DepartmentRepository.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
         public IActionResult CheckName(string Name)
         {
-            bool Flag = DepartmentRepository.CheckUnique(Name);
+            bool Flag = UnitOfWorkRepository.DepartmentRepository.CheckUnique(Name);
 
             if(Flag)
             {
@@ -92,6 +95,7 @@ namespace PresentationLayer.Controllers
             return Json(false);
         }
 
+        // For Just Test
         [Route("emp/{Name:alpha}")]
         // OR : [HttpGet("emp/{Name:alpha}")]
         public IActionResult ActionRoute(string Name)

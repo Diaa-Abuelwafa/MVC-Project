@@ -1,13 +1,9 @@
 ﻿@model Employee
 
-@inject IDepartmentRepository DepartmentRepository
-
 @{
     ViewData["Title"] = "Employee";
 
-    List<Department> Depts = DepartmentRepository.GetAll();
-
-    SelectList Departments = new SelectList(Depts, "DepartmentId", "Name");
+    SelectList Departments = new SelectList(ViewBag.Departments, "DepartmentId", "Name");
 }
 
 <h1>Add Employee Page</h1>

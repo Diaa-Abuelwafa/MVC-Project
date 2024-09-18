@@ -9,6 +9,6 @@ namespace BusinessLogicLayer.Interfaces
 {
     public interface IEmployeeRepository : IGenericRepository<Employee>
     {
-        
+        public List<Employee> GetAllByName(string Word);
     }
 }

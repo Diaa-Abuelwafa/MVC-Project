@@ -62,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Employee/PartialViews/_FormEmployeePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUGFydGlhbFZpZXdzXF9Gb3JtRW1wbG95ZWVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Employee/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,10 +80,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_FormEmployeePartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3JtRW1wbG95ZWVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_FormPartial.cshtml]

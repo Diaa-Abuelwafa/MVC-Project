@@ -5,7 +5,7 @@
 <br />
 <br />
 
-<partial name="_FormEmployeePartial" model="Model"></partial>
+<partial name="PartialViews/_FormEmployeePartial" model="Model"></partial>
 
 <a class="btn btn-danger" asp-controller="Employee" asp-action="SaveDelete" asp-route-id="@Model.EmployeeId">Delete</a>
-<a class="btn btn-light" asp-controller="Department" asp-action="Index">Back To List</a>
+<a class="btn btn-light" asp-controller="Employee" asp-action="Index">Back To List</a>

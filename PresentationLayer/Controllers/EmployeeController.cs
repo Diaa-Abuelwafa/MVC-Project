@@ -1,4 +1,5 @@
-﻿using BusinessLogicLayer.Interfaces;
+﻿using AutoMapper;
+using BusinessLogicLayer.Interfaces;
 using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,18 +7,29 @@ namespace PresentationLayer.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly IEmployeeRepository EmployeeRepository;
-        private readonly IDepartmentRepository DepartmentRepository;
+        //private readonly IEmployeeRepository EmployeeRepository;
+        //private readonly IDepartmentRepository DepartmentRepository;
+        //private readonly IMapper mapper;
 
-        public EmployeeController(IEmployeeRepository EmployeeRepository, IDepartmentRepository DepartmentRepository)
+        private readonly IUnitOfWorkRepository UnitOfWorkRepository;
+        public EmployeeController(IUnitOfWorkRepository UnitOfWorkRepository /*,IMapper Mapper*/)
         {
             // Inject
-            this.EmployeeRepository = EmployeeRepository;
-            this.DepartmentRepository = DepartmentRepository;
+            this.UnitOfWorkRepository = UnitOfWorkRepository;
+            //mapper = Mapper;
         }
-        public IActionResult Index()
+        public IActionResult Index(string Word)
         {
-            List<Employee> Employees = EmployeeRepository.GetAll();
+            List<Employee> Employees = new List<Employee>();
+
+            if(Word == null)
+            {
+                Employees = UnitOfWorkRepository.EmployeeRepository.GetAll();
+            }
+            else
+            {
+                Employees = UnitOfWorkRepository.EmployeeRepository.GetAllByName(Word);
+            }
 
             return View(Employees);
         }
@@ -25,6 +37,12 @@ namespace PresentationLayer.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            ViewBag.Departments = UnitOfWorkRepository.DepartmentRepository.GetAll();
+
+            // Just Example For Practice
+            //Department D = new Department();
+            //var Result = mapper.Map<Employee>(D);
+
             return View();
         }
 
@@ -36,7 +54,7 @@ namespace PresentationLayer.Controllers
             {
                 if (Emp.DeptId != -1)
                 {
-                    EmployeeRepository.Insert(Emp);
+                    UnitOfWorkRepository.EmployeeRepository.Insert(Emp);
 
                     return RedirectToAction("Index");
                 }
@@ -46,19 +64,23 @@ namespace PresentationLayer.Controllers
                 }
             }
 
+            ViewBag.Departments = UnitOfWorkRepository.DepartmentRepository.GetAll();
+
             return View("Add", Emp);
         }
 
         public IActionResult Details(int id)
         {
-            Employee Emp = EmployeeRepository.GetById(id);
+            Employee Emp = UnitOfWorkRepository.EmployeeRepository.GetById(id);
 
             return View(Emp);
         }
 
         public IActionResult Update(int id)
         {
-            Employee Emp = EmployeeRepository.GetById(id);
+            Employee Emp = UnitOfWorkRepository.EmployeeRepository.GetById(id);
+
+            ViewBag.Departments = UnitOfWorkRepository.DepartmentRepository.GetAll();
 
             return View(Emp);
         }
@@ -71,7 +93,8 @@ namespace PresentationLayer.Controllers
             {
                 if (Emp.DeptId != -1)
                 {
-                    EmployeeRepository.Edit(id, Emp);
+                    UnitOfWorkRepository.EmployeeRepository.Edit(id, Emp);
+                    UnitOfWorkRepository.EmployeeRepository.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
@@ -81,19 +104,22 @@ namespace PresentationLayer.Controllers
                 }
             }
 
+            ViewBag.Departments = UnitOfWorkRepository.DepartmentRepository.GetAll();
+
             return View("Update", Emp);
         }
 
         public IActionResult Delete(int id)
         {
-            Employee Emp = EmployeeRepository.GetById(id);
+            Employee Emp = UnitOfWorkRepository.EmployeeRepository.GetById(id);
 
             return View(Emp);
         }
 
         public IActionResult SaveDelete(int id)
         {
-            EmployeeRepository.Delete(id);
+            UnitOfWorkRepository.EmployeeRepository.Delete(id);
+            UnitOfWorkRepository.EmployeeRepository.SaveChanges();
 
             return RedirectToAction("Index");
         }

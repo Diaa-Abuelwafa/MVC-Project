@@ -1,13 +1,9 @@
 ﻿@model Employee
 
-@inject IDepartmentRepository DepartmentRepository
-
 @{
     ViewData["Title"] = "Employee";
 
-    List<Department> Depts = DepartmentRepository.GetAll();
-
-    SelectList Departments = new SelectList(Depts, "DepartmentId", "Name");
+    SelectList Departments = new SelectList(ViewBag.Departments, "DepartmentId", "Name");
 }
 
 <h1>Edit Employee Page</h1>
@@ -92,7 +88,6 @@
     <input class="btn btn-primary" type="submit" value="Save"/>
     <a class="btn btn-light" asp-controller="Employee" asp-action="Index">Back To List</a>
 </form>
-
 
 @section Scripts
 {

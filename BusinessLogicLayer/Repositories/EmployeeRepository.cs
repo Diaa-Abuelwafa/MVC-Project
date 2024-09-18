@@ -25,7 +25,7 @@ namespace BusinessLogicLayer.Repositories
 
             Context.Employees.Remove(E);
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
         }
 
         public void Edit(int id, Employee Item)
@@ -42,12 +42,17 @@ namespace BusinessLogicLayer.Repositories
             E.HireDate = Item.HireDate;
             E.DeptId = Item.DeptId;
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
         }
 
         public List<Employee> GetAll()
         {
             return Context.Employees.Include(x => x.Department).ToList();
+        }
+
+        public List<Employee> GetAllByName(string Word)
+        {
+            return Context.Employees.Include(x => x.Department).Where(x => x.Name.ToLower().Contains(Word.ToLower()) == true).ToList();
         }
 
         public Employee GetById(int id)
@@ -59,7 +64,11 @@ namespace BusinessLogicLayer.Repositories
         {
             Context.Employees.Add(Item);
 
-            Context.SaveChanges();
+            //Context.SaveChanges();
+        }
+        public int SaveChanges()
+        {
+            return Context.SaveChanges();
         }
     }
 }
