@@ -34,6 +34,7 @@ namespace PresentationLayer.Controllers
             {
                 UnitOfWorkRepository.DepartmentRepository.Insert(D);
                 UnitOfWorkRepository.DepartmentRepository.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 

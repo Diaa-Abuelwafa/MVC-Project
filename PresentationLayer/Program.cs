@@ -25,15 +25,15 @@ namespace PresentationLayer
             // Add Custom Service To The Container
             builder.Services.AddScoped<IUnitOfWorkRepository, UnitOfWorkRepository>();
 
+            // Add Custom Service To The Container
+            builder.Services.AddScoped<FileHelper>();
+
             // Add DbContext Service To The Container
             builder.Services.AddDbContext<AppDbContext>(optionBuilder =>
             {
                 // Read ConnectionString From AppSettings.json
                 optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("cs"));
             });
-
-            // Add Custom Service To The Container
-            builder.Services.AddScoped<FileHelper>();
 
             // Registe Built-In Service
             builder.Services.AddAutoMapper(typeof(MappingProfile));

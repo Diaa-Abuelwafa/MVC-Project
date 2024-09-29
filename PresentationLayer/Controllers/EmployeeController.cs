@@ -3,6 +3,7 @@ using BusinessLogicLayer.Interfaces;
 using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.Controllers.Helpers;
+using PresentationLayer.Models.ViewModels;
 
 namespace PresentationLayer.Controllers
 {
@@ -61,7 +62,12 @@ namespace PresentationLayer.Controllers
                 {
                     if(Image != null)
                     {
-                        Emp.ImagePath = Helper.StoreFile(Image, "Images");
+                        FileViewModel FileModel = new FileViewModel();
+
+                        FileModel = Helper.StoreFile(Image, "Images");
+
+                        Emp.ImageNameWithGuid = FileModel.FileNameWithGuid;
+                        Emp.ImageName = FileModel.FileName;
                     }
 
                     UnitOfWorkRepository.EmployeeRepository.Insert(Emp);
@@ -98,12 +104,29 @@ namespace PresentationLayer.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(int id, Employee Emp)
+        public IActionResult Update(int id, Employee Emp, IFormFile Image)
         {
             if (ModelState.IsValid == true)
             {
                 if (Emp.DeptId != -1)
                 {
+                    if(Image != null)
+                    {
+                        Employee EmpBefore = UnitOfWorkRepository.EmployeeRepository.GetById(id);
+
+                        if(EmpBefore.ImageName != Image.FileName)
+                        {
+                            if(EmpBefore.ImageNameWithGuid != null)
+                            {
+                                Helper.DeleteFile(EmpBefore.ImageNameWithGuid, "Images");
+                            }
+
+                            FileViewModel FileModel = Helper.StoreFile(Image, "Images");
+                            Emp.ImageName = FileModel.FileName;
+                            Emp.ImageNameWithGuid = FileModel.FileNameWithGuid;
+                        }
+                    }
+
                     UnitOfWorkRepository.EmployeeRepository.Edit(id, Emp);
                     UnitOfWorkRepository.EmployeeRepository.SaveChanges();
 
@@ -130,10 +153,9 @@ namespace PresentationLayer.Controllers
         public IActionResult SaveDelete(int id)
         {
             Employee Emp = UnitOfWorkRepository.EmployeeRepository.GetById(id);
-
-            if(Emp.ImagePath != null)
+            if(Emp.ImageNameWithGuid != null)
             {
-                Helper.DeleteFile(Emp.ImagePath, "Images");
+                Helper.DeleteFile(Emp.ImageNameWithGuid, "Images");
             }
 
             UnitOfWorkRepository.EmployeeRepository.Delete(id);

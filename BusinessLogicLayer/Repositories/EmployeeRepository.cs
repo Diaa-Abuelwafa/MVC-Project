@@ -41,6 +41,8 @@ namespace BusinessLogicLayer.Repositories
             E.IsActive = Item.IsActive;
             E.HireDate = Item.HireDate;
             E.DeptId = Item.DeptId;
+            E.ImageNameWithGuid = Item.ImageNameWithGuid;
+            E.ImageName = Item.ImageName;
 
             //Context.SaveChanges();
         }

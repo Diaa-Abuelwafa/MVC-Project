@@ -1,21 +1,22 @@
-﻿namespace PresentationLayer.Controllers.Helpers
+﻿using PresentationLayer.Models.ViewModels;
+
+namespace PresentationLayer.Controllers.Helpers
 {
     public class FileHelper
     {
         private readonly IWebHostEnvironment Env;
+
         public FileHelper(IWebHostEnvironment Env)
         {
-            // Injection
             this.Env = Env;
         }
-
-        public string StoreFile(IFormFile File, string FolderName)
+        public FileViewModel StoreFile(IFormFile File, string FolderName)
         {
             string FolderPath = Path.Combine(Env.WebRootPath, FolderName);
 
-            string FileName = Guid.NewGuid().ToString() + "_" + File.FileName;
+            string FileNameGuid = Guid.NewGuid().ToString() + "_" + File.FileName;
 
-            string FilePath = Path.Combine(FolderPath, FileName);
+            string FilePath = Path.Combine(FolderPath, FileNameGuid);
 
             using(var Stream = new FileStream(FilePath, FileMode.Create))
             {
@@ -24,19 +25,22 @@
                 Stream.Close();
             }
 
-            return FileName;
+            FileViewModel FileInfo = new FileViewModel();
+            // This Will Store In DB
+            FileInfo.FileNameWithGuid = FileNameGuid;
+            FileInfo.FileName = File.FileName;
+
+            return FileInfo;
         }
 
-        public void DeleteFile(string FileName, string FolderName)
+        public void DeleteFile(string ImageNameWithGuid, string FolderName)
         {
             string FolderPath = Path.Combine(Env.WebRootPath, FolderName);
 
-            string FilePath = Path.Combine(FolderPath, FileName);
+            string FilePath = Path.Combine(FolderPath, ImageNameWithGuid);
 
-            if(File.Exists(FilePath))
-            {
+            if (File.Exists(FilePath))
                 File.Delete(FilePath);
-            }
         }
     }
 }
