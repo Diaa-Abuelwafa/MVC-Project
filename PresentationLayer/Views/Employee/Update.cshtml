@@ -11,7 +11,7 @@
 <br />
 <br />
 
-<form asp-controller="Employee" asp-action="Update">
+<form asp-controller="Employee" asp-action="Update" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" class="form-control">
@@ -72,6 +72,13 @@
         <label asp-for="HireDate"></label>
         <input asp-for="HireDate" class="form-control">
         <span class="text-danger" asp-validation-for="HireDate"></span>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label for="Image" class="form-label">Choose Image</label>
+        <input class="form-control" type="file" name="Image">
     </div>
 
     <br />

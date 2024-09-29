@@ -41,5 +41,6 @@ namespace DataAccessLayer.Models
         public DateTime HireDate { get; set; }
         public int DeptId { get; set; }
         public Department? Department { get; set; }
+        public string? ImagePath { get; set; }
     }
 }

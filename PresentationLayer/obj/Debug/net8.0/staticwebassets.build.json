@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HGR3zfA1mFE6wzMt/kDn8n6ortf2Kt+vUlUK/lQ5z9g=",
+  "Hash": "UDX+Sd3qhQ3jxW1ll4MFStpDDmdlKXDuid3tFz9ds4c=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\PresentationLayer\\wwwroot\\Images\\132eab1a-6bbc-4527-9024-5c071949e837_photo_٢٠٢٤-٠٦-١٧_١٢-١٩-٢٥.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/132eab1a-6bbc-4527-9024-5c071949e837_photo_٢٠٢٤-٠٦-١٧_١٢-١٩-٢٥.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\132eab1a-6bbc-4527-9024-5c071949e837_photo_٢٠٢٤-٠٦-١٧_١٢-١٩-٢٥.jpg"
     },
     {
       "Identity": "D:\\Technologies\\Backend\\7- Asp.Net MVC\\MVC Project Learning\\MVCProject01\\PresentationLayer\\wwwroot\\js\\site.js",

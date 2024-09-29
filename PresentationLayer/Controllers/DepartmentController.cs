@@ -33,6 +33,7 @@ namespace PresentationLayer.Controllers
             if(ModelState.IsValid == true)
             {
                 UnitOfWorkRepository.DepartmentRepository.Insert(D);
+                UnitOfWorkRepository.DepartmentRepository.SaveChanges();
                 return RedirectToAction("Index");
             }
 

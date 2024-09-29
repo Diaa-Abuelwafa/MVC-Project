@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DataAccessLayer.Data.Migrations
+namespace DataAccessLayer.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration
@@ -40,7 +40,8 @@ namespace DataAccessLayer.Data.Migrations
                     PhoneNumber = table.Column<long>(type: "bigint", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     HireDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DeptId = table.Column<int>(type: "int", nullable: false)
+                    DeptId = table.Column<int>(type: "int", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

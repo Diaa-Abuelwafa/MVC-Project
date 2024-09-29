@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DataAccessLayer.Data.Migrations
+namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240917122919_InitialMigration")]
+    [Migration("20240929053839_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -74,6 +74,9 @@ namespace DataAccessLayer.Data.Migrations
 
                     b.Property<DateTime>("HireDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");

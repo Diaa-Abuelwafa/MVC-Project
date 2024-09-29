@@ -2,6 +2,7 @@
 using BusinessLogicLayer.Interfaces;
 using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
+using PresentationLayer.Controllers.Helpers;
 
 namespace PresentationLayer.Controllers
 {
@@ -12,10 +13,14 @@ namespace PresentationLayer.Controllers
         //private readonly IMapper mapper;
 
         private readonly IUnitOfWorkRepository UnitOfWorkRepository;
-        public EmployeeController(IUnitOfWorkRepository UnitOfWorkRepository /*,IMapper Mapper*/)
+        private readonly FileHelper Helper;
+
+        public EmployeeController(IUnitOfWorkRepository UnitOfWorkRepository /*,IMapper Mapper*/,
+                                  FileHelper Helper)
         {
-            // Inject
+            // Injection
             this.UnitOfWorkRepository = UnitOfWorkRepository;
+            this.Helper = Helper;
             //mapper = Mapper;
         }
         public IActionResult Index(string Word)
@@ -48,13 +53,19 @@ namespace PresentationLayer.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Add(Employee Emp)
+        public IActionResult Add(Employee Emp, IFormFile? Image)
         {
             if (ModelState.IsValid == true)
             {
                 if (Emp.DeptId != -1)
                 {
+                    if(Image != null)
+                    {
+                        Emp.ImagePath = Helper.StoreFile(Image, "Images");
+                    }
+
                     UnitOfWorkRepository.EmployeeRepository.Insert(Emp);
+                    UnitOfWorkRepository.EmployeeRepository.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
@@ -118,6 +129,13 @@ namespace PresentationLayer.Controllers
 
         public IActionResult SaveDelete(int id)
         {
+            Employee Emp = UnitOfWorkRepository.EmployeeRepository.GetById(id);
+
+            if(Emp.ImagePath != null)
+            {
+                Helper.DeleteFile(Emp.ImagePath, "Images");
+            }
+
             UnitOfWorkRepository.EmployeeRepository.Delete(id);
             UnitOfWorkRepository.EmployeeRepository.SaveChanges();
 

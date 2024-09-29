@@ -2,6 +2,7 @@ using BusinessLogicLayer.Interfaces;
 using BusinessLogicLayer.Repositories;
 using DataAccessLayer.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using PresentationLayer.Controllers.Helpers;
 using PresentationLayer.Models.Mapping;
 
 namespace PresentationLayer
@@ -30,6 +31,9 @@ namespace PresentationLayer
                 // Read ConnectionString From AppSettings.json
                 optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("cs"));
             });
+
+            // Add Custom Service To The Container
+            builder.Services.AddScoped<FileHelper>();
 
             // Registe Built-In Service
             builder.Services.AddAutoMapper(typeof(MappingProfile));
