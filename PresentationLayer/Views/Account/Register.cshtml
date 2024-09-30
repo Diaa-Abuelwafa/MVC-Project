@@ -1,0 +1,60 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3 class="text-center">Register</h3>
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <form asp-controller="Account" asp-action="Register">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="UserName"></label>
+                    <input class="form-control" placeholder="Enter your UserName" asp-for="UserName">
+                    <span class="text-danger" asp-validation-for="UserName"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Email"></label>
+                    <input class="form-control" placeholder="Enter your Email" asp-for="Email">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Password"></label>
+                    <input class="form-control" placeholder="Enter your Password" asp-for="Password">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ConfirmedPassword"></label>
+                    <input class="form-control" placeholder="Enter your Password" asp-for="ConfirmedPassword">
+                    <span class="text-danger" asp-validation-for="ConfirmedPassword"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Address"></label>
+                    <input class="form-control" placeholder="Enter your Address" asp-for="Address">
+                    <span class="text-danger" asp-validation-for="Address"></span>
+                </div>
+                <div class="form-check">
+                    <input required class="form-check-input" type="checkbox" id="IsAgree" asp-for="IsAgree">
+                    <label class="form-check-label" asp-for="IsAgree">I agree to the terms and conditions</label>
+                    <span class="text-danger" asp-validation-for="IsAgree"></span>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+            <div class="mt-3 text-center">
+                <p>Already have an account? <a asp-controller="Account" asp-action="Login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--To Make A Client Side Validation-->
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

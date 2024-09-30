@@ -515,3 +515,9 @@ D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\Present
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\obj\Debug\net8.0\PresentationLayer.genruntimeconfig.cache
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\obj\Debug\net8.0\ref\PresentationLayer.dll
 D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\AutoMapper.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

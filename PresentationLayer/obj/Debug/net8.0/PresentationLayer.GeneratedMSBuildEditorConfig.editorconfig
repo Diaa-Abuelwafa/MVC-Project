@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/CheckInbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja0luYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/ForgetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Department/AddDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBZGREZXBhcnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -80,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_FormPartial.cshtml]
