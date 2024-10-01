@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.Controllers.Helpers;
@@ -184,6 +185,20 @@ namespace PresentationLayer.Controllers
             }
 
             return View(Model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await SignInManager.SignOutAsync();
+
+            return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

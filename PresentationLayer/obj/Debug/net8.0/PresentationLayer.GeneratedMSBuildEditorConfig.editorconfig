@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Technologies\Backend\7- Asp.Net MVC\MVC Project Learning\MVCProject01\PresentationLayer
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Account/CheckInbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja0luYm94LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,6 +102,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/AddOrRemove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRPclJlbW92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/PartialViews/_FormRolePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxQYXJ0aWFsVmlld3NcX0Zvcm1Sb2xlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Role/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -112,6 +144,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/User/PartialViews/_FormUserPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsVmlld3NcX0Zvcm1Vc2VyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/User/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technologies/Backend/7- Asp.Net MVC/MVC Project Learning/MVCProject01/PresentationLayer/Views/_ViewImports.cshtml]

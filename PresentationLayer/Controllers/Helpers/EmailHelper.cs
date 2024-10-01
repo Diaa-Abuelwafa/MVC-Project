@@ -13,10 +13,10 @@ namespace PresentationLayer.Controllers.Helpers
 
             // Configurations For Configure The 'From'
             Client.EnableSsl = true;
-            Client.Credentials = new NetworkCredential("diaaabuelwafa@gmail.com", "Akmn123123");
+            Client.Credentials = new NetworkCredential("routec41v02@gmail.com", "hqqfzhuptaqfhzix");
 
             // Send This Mail
-            Client.Send("diaaabuelwafa@gmail.com", Email.To, Email.Subject, Email.Body);
+            Client.Send("routec41v02@gmail.com", Email.To, Email.Subject, Email.Body);
         }
     }
 }

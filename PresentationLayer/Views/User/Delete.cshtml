@@ -1,0 +1,11 @@
+﻿@model UserViewModel
+
+<h1>Delete User Page</h1>
+
+<br />
+<br />
+
+<partial name="PartialViews/_FormUserPartial" model="Model"></partial>
+
+<a class="btn btn-danger" asp-controller="User" asp-action="SaveDelete" asp-route-id="@Model.Id">Delete</a>
+<a class="btn btn-light" asp-controller="User" asp-action="Index">Back To List</a>

@@ -1,0 +1,62 @@
+﻿@model List<RoleViewModel>
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h1>All Roles</h1>
+
+<br />
+<br />
+
+<a class="btn btn-primary" asp-controller="Role" asp-action="Create">Add Role</a>
+
+<br />
+<br />
+
+<center>
+    <form asp-controller="Role" asp-action="Index">
+        <input name="Word" class="form-control-sm" type="text" placeholder="Search By Name" />
+        <input class="btn btn-primary" type="submit" value="Search" />
+    </form>
+</center>
+
+<br />
+<br />
+
+@if (Model.Count > 0)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a class="btn btn-warning" asp-controller="Role" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="Role" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" asp-controller="Role" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h4 class="alert alert-danger">There Are No Roles Currently</h4>
+}

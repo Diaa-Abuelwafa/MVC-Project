@@ -1,10 +1,12 @@
 ﻿using BusinessLogicLayer.Interfaces;
 using BusinessLogicLayer.Repositories;
 using DataAccessLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Controllers
 {
+    [Authorize]
     public class DepartmentController : Controller
     {
         //IDepartmentRepository DepartmentRepository;

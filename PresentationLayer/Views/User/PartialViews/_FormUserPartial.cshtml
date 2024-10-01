@@ -1,0 +1,39 @@
+﻿@model UserViewModel
+
+
+
+<div class="form-group">
+    <label asp-for="Id"></label>
+    <input readonly asp-for="Id" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="UserName"></label>
+    <input readonly asp-for="UserName" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input readonly asp-for="Email" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Roles"></label>
+    <input readonly value="@String.Join(" ", Model.Roles)" class="form-control">
+</div>
+
+<br />
+
+<div class="form-group">
+    <label asp-for="Address"></label>
+    <input readonly asp-for="Address" class="form-control">
+</div>
+
+<br />
+
